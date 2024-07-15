@@ -10,3 +10,8 @@ It can be added by changing your config file:
     ]
 }
 ```
+
+
+### Acknowledgements
+
+Credit to (sasial-dev)[https://github.com/sasial-dev] for their (Aftman config)[https://github.com/sasial-dev/aftman-renovate-config].
