@@ -1,0 +1,19 @@
+{
+	"extends": [
+		"config:base"
+	],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"fileMatch": ["^rokit.toml$"],
+			"matchStrings": [".+ = { name = \"(?<depName>.+)\", version = \"(?<currentValue>.+)\" }", ".+ = \"(?<depName>.+)@(?<currentValue>.+)\""],
+			"datasourceTemplate": "github-releases"
+		}
+	],
+	"packageRules": [
+		{
+			"matchPaths": ["rokit.toml"],
+			"extractVersion": "^v?(?<version>.*)$"
+		}
+	]
+}
